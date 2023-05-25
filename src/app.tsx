@@ -29,11 +29,18 @@ export function App() {
 		}
 	};
 
+	const Dots = () => {
+		return <i class="dot"></i>;
+	};
+
 	return (
 		<>
 			{!guessed ? (
 				<>
-					<h2>Enter password</h2>
+					<h2>Enter Passcode</h2>
+					{[...Array(PASSWORD.length)].map((_, i) => (
+						<Dots key={i} />
+					))}
 					<div class="card">
 						{nums.map((num) => (
 							<button onClick={handleClick} value={num} key={num}>
