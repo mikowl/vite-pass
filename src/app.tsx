@@ -29,8 +29,8 @@ export function App() {
 		}
 	};
 
-	const Dots = () => {
-		return <i class="dot"></i>;
+	const Dots = ({ filled }: { filled?: boolean }) => {
+		return <i className={`dot ${filled ? "filled" : ""}`}></i>;
 	};
 
 	return (
@@ -39,7 +39,7 @@ export function App() {
 				<>
 					<h2>Enter Passcode</h2>
 					{[...Array(PASSWORD.length)].map((_, i) => (
-						<Dots key={i} />
+						<Dots key={i} filled={currentPass.length > i} />
 					))}
 					<div class="card">
 						{nums.map((num) => (

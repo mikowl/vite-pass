@@ -133,11 +133,15 @@ button:focus-visible {
 
 .dot {
 	display: inline-block;
-	width: 10px;
-	height: 10px;
+	width: 12px;
+	height: 12px;
 	border-radius: 100%;
-	border: 2px solid rgb(255 255 255 / 50%);
-	margin: 0 5px;
+	outline: 2px solid rgb(255 255 255 / 50%);
+	margin: 0 7px;
+}
+
+.dot.filled {
+	background: rgb(255 255 255 / 50%);
 }
 
 @media (prefers-color-scheme: light) {
