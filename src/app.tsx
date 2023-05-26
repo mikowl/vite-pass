@@ -41,7 +41,7 @@ export function App() {
 					{[...Array(PASSWORD.length)].map((_, i) => (
 						<Dots key={i} filled={currentPass.length > i} />
 					))}
-					<div class="card">
+					<div class="card numbers">
 						{nums.map((num) => (
 							<button onClick={handleClick} value={num} key={num}>
 								{num}
@@ -68,6 +68,13 @@ export function App() {
 					<button onClick={() => setGuessed(false)}>Try again</button>
 				</div>
 			)}
+			<a
+				href="https://github.com/mikowl/vite-pass"
+				target="_blank"
+				style={{ position: "absolute", bottom: "1rem", right: "1rem" }}
+			>
+				Github
+			</a>
 		</>
 	);
 }
