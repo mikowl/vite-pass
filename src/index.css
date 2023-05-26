@@ -2,11 +2,8 @@
 	font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
 	line-height: 1.5;
 	font-weight: 400;
-
-	color-scheme: light dark;
 	color: rgba(255, 255, 255, 0.87);
-	background-color: #242424;
-
+	background-color: #0b272c;
 	font-synthesis: none;
 	text-rendering: optimizeLegibility;
 	-webkit-font-smoothing: antialiased;
@@ -60,30 +57,12 @@ button {
 	cursor: pointer;
 	transition: border-color 0.25s;
 }
-button:hover {
-	border-color: #32a8b2;
-}
-button:focus,
-button:focus-visible {
-	outline: 4px auto -webkit-focus-ring-color;
-}
 
 #app {
 	max-width: 1280px;
 	margin: 0 auto;
 	padding: 2rem;
 	text-align: center;
-}
-
-.logo {
-	height: 6em;
-	padding: 1.5em;
-}
-.logo:hover {
-	filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.preact:hover {
-	filter: drop-shadow(0 0 2em #673ab8aa);
 }
 
 .card {
@@ -97,20 +76,25 @@ button:focus-visible {
 	max-width: 420px;
 }
 .card button {
-	/* 3 column flex */
 	flex: 28.75%;
-	background-color: rgb(255 255 255 / 40%);
+	/* background-color: rgb(255 255 255 / 40%); */
+	background-color: rgb(16 130 164 / 40%);
 	backdrop-filter: blur(10px);
 	border-radius: 100%;
-	color: #07262c;
-	font-size: clamp(1.25rem, 3vw, 2rem);
-	font-weight: bold;
+	/* color: #07262c; */
+	color: #fff;
+	font-size: clamp(1.25rem, 5vw, 2.25rem);
+	font-weight: 400;
 	aspect-ratio: 1;
+	transition: all 0.3s ease-in-out;
 }
 .card button:last-child {
 	max-width: 30.333%;
 }
 
+.card button:active {
+	background-color: rgb(16 130 164 / 60%);
+}
 .box {
 	background: rgb(0 0 0 / 30%);
 	padding: 1rem;
@@ -142,17 +126,4 @@ button:focus-visible {
 
 .dot.filled {
 	background: rgb(255 255 255 / 50%);
-}
-
-@media (prefers-color-scheme: light) {
-	:root {
-		color: #213547;
-		background-color: #ffffff;
-	}
-	a:hover {
-		color: #747bff;
-	}
-	button {
-		background-color: #f9f9f9;
-	}
 }
