@@ -103,6 +103,11 @@ button {
 .box h3 {
 	margin: 0;
 }
+.box button {
+	margin-top: 1rem;
+	background: #0b272c;
+	color: #FFF;
+}
 
 .very-good,
 .no-entry {
@@ -126,4 +131,19 @@ button {
 
 .dot.filled {
 	background: rgb(255 255 255 / 50%);
+}
+
+.scale-up-top {
+	animation: scale-up-top 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+@keyframes scale-up-top {
+	0% {
+		transform: scale(0.7) translateY(-200%);
+		transform-origin: 50% 0%;
+	}
+	100% {
+		transform: scale(1) translateY(0);
+		transform-origin: 50% 0%;
+	}
 }

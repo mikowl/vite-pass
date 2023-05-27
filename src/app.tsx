@@ -50,15 +50,16 @@ export function App() {
 					</div>
 				</>
 			) : matched ? (
-				<div class="correct box">
+				<div class="correct box scale-up-top">
 					<h3>Correct 🔑</h3>
 					<img
 						class="very-good"
 						src="https://media3.giphy.com/media/lvOnlEYunAwOkHjgmU/giphy.webp?cid=dda24d50vkb4e29h14jlmp1t8eba4fe3zyqmhneqxg1e92gf&ep=v1_gifs_related&rid=giphy.webp&ct=g"
 					/>
+					<button onClick={() => setGuessed(false)}>Back</button>
 				</div>
 			) : (
-				<div class="incorrect box">
+				<div class="incorrect box scale-up-top">
 					<h3>🔒 Incorrect</h3>
 					<img
 						class="no-entry"
